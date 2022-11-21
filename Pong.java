@@ -58,14 +58,14 @@ public class Pong extends JFrame {
 		b.p1.draw(g);
 		b.p2.draw(g);
 		
-		g.setColor(Color.WHITE);
+		g.setColor(Color.PINK);
 		g.drawString(""+b.p1score, 15, 20);
 		g.drawString(""+b.p2score, 385, 20);
 		
 		repaint();
 	}
 	
-	public class AL extends KeyAdapter {
+	private class AL extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent e) {
 			b.p1.keyPressed(e);
