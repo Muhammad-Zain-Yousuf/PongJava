@@ -10,7 +10,7 @@ public class Ball implements Runnable {
 
 	//global variables
 	int x, y, xDirection, yDirection;
-	private volatile boolean exit = false;
+	boolean exit = false;
 	
 	int p1score, p2score;
 	
@@ -41,6 +41,7 @@ public class Ball implements Runnable {
 		//create "ball"
 		ball = new Rectangle(this.x, this.y, 15, 15);
 	}
+
 	
 	public void setXDirection(int xDir){
 		xDirection = xDir;
@@ -88,7 +89,8 @@ public class Ball implements Runnable {
 		exit = true;
 	}
 
-	@Override
+
+ 	@Override
 	public void run() {
 		try {
 			while(!exit) {

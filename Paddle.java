@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 
 public class Paddle implements Runnable{
 	
-	int x, y, yDirection, id;
+	int x, y, yDirection, id; 
 	
 	Rectangle paddle;
 	
@@ -28,6 +28,7 @@ public class Paddle implements Runnable{
 		case 1:
 			if(e.getKeyCode() == KeyEvent.VK_W) {
 				setYDirection(-1);
+			
 			}
 			if(e.getKeyCode() == KeyEvent.VK_S) {
 				setYDirection(1);
@@ -48,6 +49,7 @@ public class Paddle implements Runnable{
 	public void keyReleased(KeyEvent e) {
 		setYDirection(0);
 	}	
+	
 	public void setYDirection(int yDir) {
 		yDirection = yDir;
 	}
@@ -84,7 +86,5 @@ public class Paddle implements Runnable{
 		} catch(Exception e) { System.err.println(e.getMessage()); }
 	}
 
-
-	
 
 }

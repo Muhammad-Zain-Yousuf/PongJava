@@ -5,10 +5,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 
-class Stop {
-	public static int stop = 0;
-}
-
 public class Pong extends JFrame {
 	
 	//screen size variables.
@@ -39,6 +35,7 @@ public class Pong extends JFrame {
 		Pong pg = new Pong();
 		
 		//create and start threads.
+		
 		Thread ball = new Thread(b);
 		ball.start();
 		Thread p1 = new Thread(b.p1);
