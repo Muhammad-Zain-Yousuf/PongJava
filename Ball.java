@@ -10,13 +10,14 @@ public class Ball implements Runnable {
 
 	//global variables
 	int x, y, xDirection, yDirection;
-	
+	private volatile boolean exit = false;
 	
 	int p1score, p2score;
 	
 	Paddle p1 = new Paddle(10, 25, 1);
 	Paddle p2 = new Paddle(485, 25, 2);
 	
+	//Rectangle ball;
 	Rectangle ball;
 
 	
@@ -83,12 +84,16 @@ public class Ball implements Runnable {
 		}
 	}
 	
+	public void shutdown() {
+		exit = true;
+	}
+
 	@Override
 	public void run() {
 		try {
-			while(true) {
+			while(!exit) {
 				move();
-				Thread.sleep(8);
+				Thread.sleep(7);
 			}
 		}catch(Exception e) { System.err.println(e.getMessage()); }
 

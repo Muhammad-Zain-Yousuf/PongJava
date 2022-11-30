@@ -46,31 +46,6 @@ public class Paddle implements Runnable{
 	}
 	
 	public void keyReleased(KeyEvent e) {
-		/* 
-		switch(id) {
-		default:
-			System.out.println("Please enter a Valid ID in paddle contructor");
-			break;
-		case 1:
-			if(e.getKeyCode() == KeyEvent.VK_UP) {
-				setYDirection(0);
-			}
-			if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-				setYDirection(0);
-			}
-			break;
-		
-		case 2:
-			
-			if(e.getKeyCode() == KeyEvent.VK_W) {
-				setYDirection(0);
-			}
-			if(e.getKeyCode() == KeyEvent.VK_S) {
-				setYDirection(0);
-			}
-			break;
-		}
-		*/
 		setYDirection(0);
 	}	
 	public void setYDirection(int yDir) {

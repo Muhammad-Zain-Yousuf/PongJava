@@ -5,6 +5,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 
+class Stop {
+	public static int stop = 0;
+}
 
 public class Pong extends JFrame {
 	
@@ -59,9 +62,24 @@ public class Pong extends JFrame {
 		b.p2.draw(g);
 		
 		g.setColor(Color.PINK);
-		g.drawString(""+b.p1score, 15, 20);
-		g.drawString(""+b.p2score, 385, 20);
+		g.drawString("P1 Score: "+b.p1score, 35, 50);
+		g.drawString("P2 Score: "+b.p2score, 385, 50);
 		
+		if (b.p1score == 3 ||  b.p2score == 3) {
+			
+			Font font = new Font("TimesRoman", Font.PLAIN, 30);
+			g.setFont(font);
+			
+			if (b.p1score > b.p2score) {
+				g.drawString("P1 WINS!", 180, 220);
+			}
+			else {
+				g.drawString("P2 WINS!", 180, 220);
+			}
+
+			b.shutdown();
+			
+		}
 		repaint();
 	}
 	
