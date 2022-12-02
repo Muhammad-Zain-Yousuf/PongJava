@@ -1,0 +1,13 @@
+How to Run Pong Game:
+
+For some reasons, .jar file is not opening. It says "error: could not find or load main class Pong"
+
+Hence, to run the game, kindly follow the below instructions:
+
+1) Extract the source code file
+2) Open your IDE
+3) Go to or Open the specified folder where you extracted in your IDE
+4) In the terminal, type this command: "java PongGame/Pong"
+
+You will see the game running!
+
